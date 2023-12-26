@@ -21,6 +21,7 @@ Why use lambda functions?
 * billed by invocation, don't have to keep an EC2 server running
 * scale automatically based on traffic
 * its serverless
+* supports multiple languages
   
 What are some useful examples?
 * create resources
@@ -67,3 +68,12 @@ What are some useful examples?
 
 ## Eventbridge 
 
+
+# Azure
+
+## Azure Function 
+* like lamda functions
+* serverless
+* compute on demand
+* scalable
+* support for multiple languages
