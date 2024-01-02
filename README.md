@@ -116,6 +116,12 @@ User Management – allows management of user lifecycles, such as importing user
 * Create and manage resources with templates
 * IAC more SIMILAR to terraform, uses YAML
 
+
+## Elastic Beanstalk
+* AWS Elastic Beanstalk is a PaaS solution for deploying and managing applications with a focus on web servers and APIs
+* Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring based on the code you upload to it, where as CloudFormation is an automated provisioning engine designed to deploy entire cloud environments via a JSON script.
+* Elastic beanstalk holds your hands a lot more
+
 ## AWS Cloud9	
 * Write, run, and debug code on a cloud IDE
 * Cloud based IDE like VSCode
@@ -146,10 +152,32 @@ User Management – allows management of user lifecycles, such as importing user
 ## AWS Copilot
 * AWS equivalent of Kubernetes
 
+## X-Ray Tracing
+* XRAY Daemon can be installed locally, so a question si like, why is it working locally and not on AWS, there might be IAM permissions missing, or you Arne’t running the daemon on AWS EC2
+* For lambda, all you need is an IAM execute role with correct policy, x-ray code imported, and enable Lambda X-ray “active tracing”
+* X-ray annotations, have indexing and filters for searching
+
+<img width="429" alt="Screenshot 2024-01-02 at 1 07 52 PM" src="https://github.com/mfkimbell/cloud-notes/assets/107063397/66a326cf-8676-473a-b9cb-dd9a321bed40">
+
+
+We have lambda execution roles (lambda function doing stuff)
+And we have Lambda resource policies (other stuff calling that function)
+
+  * NACLs are stateless, which means that information about previously sent or received traffic is not saved. If, for example, you create a NACL rule to allow specific inbound traffic to a subnet, responses to that traffic are not automatically allowed. This is in contrast to how security groups work. Security groups are stateful, which means that information about previously sent or received traffic is saved. If, for example, a security group allows inbound traffic to an EC2 instance, responses are automatically allowed regardless of outbound security group rules
+
+SSE-C encryption (storing keys client side, but encryptiion through KMS)
+Is only available through CLI
 
 
 
-  
+Dedicated Instance, WHILE YOU ARE USING the instance, no other accounts can be using it
+
+Dedicated Host, ALWAYS it will belong to you, you practically rent a hotel room all year
+
+
+SSE-S3 (default)
+SSE-KMS (can edit keys through KMS, not automatic through amazon, but also not client side)
+
 # Azure
 
 ## Azure Function 
