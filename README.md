@@ -11,6 +11,13 @@
 * SSH into Ubuntu containers ```ssh -i dpp.pem ubuntu@52.202.26.181```
 * Becoming root Ubuntu  ```sudo su -```
 
+## ECR
+* fully managed Docker container registry that makes it easy to store, share, and deploy container images.
+
+## ECS 
+* managed container service solution that's easy to use, scalable, secure, and reliable.
+* kinda like kubernetes?
+
 ## SAM (Serverless Application Model)
 * The AWS Serverless Application Model (SAM) CLI is an open-source CLI tool that helps you develop serverless applications containing Lambda functions, Step Functions, API Gateway, EventBridge, SQS, SNS and more.
 * AWS SAM templates provide a short-hand syntax, optimized for defining ```Infrastructure as Code (IaC)``` for serverless applications.
@@ -150,7 +157,8 @@ User Management – allows management of user lifecycles, such as importing user
 * AWS CodePipeline is often used in conjunction with other AWS services, such as AWS CodeBuild and AWS CodeDeploy, to create end-to-end CI/CD pipelines. Here's how CodePipeline relates to other services like CodeBuild and CodeDeploy:
 
 ## AWS Copilot
-* AWS equivalent of Kubernetes
+* CLI container management
+* AWS Copilot is a command line interface that lets you develop, release, and operate containerized applications on AWS.
 
 ## X-Ray Tracing
 * XRAY Daemon can be installed locally, so a question si like, why is it working locally and not on AWS, there might be IAM permissions missing, or you Arne’t running the daemon on AWS EC2
