@@ -167,6 +167,9 @@ User Management – allows management of user lifecycles, such as importing user
 
 <img width="429" alt="Screenshot 2024-01-02 at 1 07 52 PM" src="https://github.com/mfkimbell/cloud-notes/assets/107063397/66a326cf-8676-473a-b9cb-dd9a321bed40">
 
+## Route53
+<img width="439" alt="Screenshot 2024-01-07 at 10 17 51 AM" src="https://github.com/mfkimbell/cloud-notes/assets/107063397/9f63b265-cefc-4f93-b6a5-0f958650e7e8">
+
 
 We have lambda execution roles (lambda function doing stuff)
 And we have Lambda resource policies (other stuff calling that function)
@@ -185,6 +188,8 @@ Dedicated Host, ALWAYS it will belong to you, you practically rent a hotel room 
 
 SSE-S3 (default)
 SSE-KMS (can edit keys through KMS, not automatic through amazon, but also not client side)
+
+
 
 # Azure
 
