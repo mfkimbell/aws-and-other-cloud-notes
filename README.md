@@ -1,5 +1,8 @@
 # cloud-notes
 
+# Ansible
+* ssh on steroids
+
 # AWS
 
 ## Serverless
