@@ -99,6 +99,11 @@ User Management – allows management of user lifecycles, such as importing user
 * Captures, transforms, and delivers stream data to data lakes (s3), data stores (for structured data, like Redshift), and analyitical servies
 * It does batching, compressing, encrypting and loading stream data to Redshift, S3, Elastisearch, and Kinesis Analytics
 
+## AWS Key Management Service (KMS)
+-customer managed keys (CMK)
+-AWS managed keys
+<img width="796" alt="Screenshot 2024-04-10 at 12 41 53 PM" src="https://github.com/mfkimbell/cloud-notes/assets/107063397/aa71e19c-a3ef-4744-bb92-380a1c976fcb">
+
 ## Elasticsearch
 * `Opensearch` Opensource community version
 * `Distributed` search and analytics engine,
@@ -185,7 +190,7 @@ And we have Lambda resource policies (other stuff calling that function)
 
   * NACLs are stateless, which means that information about previously sent or received traffic is not saved. If, for example, you create a NACL rule to allow specific inbound traffic to a subnet, responses to that traffic are not automatically allowed. This is in contrast to how security groups work. Security groups are stateful, which means that information about previously sent or received traffic is saved. If, for example, a security group allows inbound traffic to an EC2 instance, responses are automatically allowed regardless of outbound security group rules
 
-SSE-C encryption (storing keys client side, but encryptiion through KMS)
+SSE-C encryption (storing keys client side, but encryptiion through )
 Is only available through CLI
 
 
@@ -196,32 +201,88 @@ Dedicated Host, ALWAYS it will belong to you, you practically rent a hotel room 
 
 
 SSE-S3 (default)
-SSE-KMS (can edit keys through KMS, not automatic through amazon, but also not client side)
+SSE- (can edit keys through , not automatic through amazon, but also not client side)
 
 
 
 # Azure
 
-## Azure Function (like aws lambda)
+(compute)
+
+## Azure VM (aws EC2)
+* instance types = VM series
+* elastic block stoarge = azure disk: persistent storage volumes for your VM
+* Script, aws user-data = azure custom-data: scripts that are run on the startup of your VM
+* Secuirty groups, AWS Security group = Azure NIC Network Security Group
+* Autoscaling, Azure VM Scale Sets = AWS Autoscaling: increase number of resources as needed
+
+## Azure VNet (aws VPC)
+* Secure your network using, Azure NSGs and ASGs = AWS NACLs and Security Groups
+
+## Azure DNS (AWS Route 53)
+
+## Azure Container Instances (AWS ECS & Fargate)
+* run containerized applications without managing servers (serverless)
+
+## Azure Container Registry (AWS ECR)
+
+## Azure Kubernetes Service (AWS EKS)
+
+## Azure Blob (AWS S3)
+* Blob storage resources: Storage Account, Container, and Blob
+* Replication, Azure Object Replication = AWS Cross Region Replication
+* Static Website Cache, Azure CDN = AWS Cloudfront: cache content from a static website
+  
+## Azure SSE (aws KMS)
+* Does data encryption
+  
+## Azure Key Vault (AWS KMS)
+* Stores keys, secrets, and certificaitons
+
+  
+## Azure Files (AWS EFS)
+
+## Azure Databox (AWS Snow Family/snowball)
+* transfer petabytes and exabytes of data to the cloud.
+
+## Azure Function (aws lambda)
 * like lamda functions
 * serverless
 * compute on demand
 * scalable
 * support for multiple languages
 
-## Azure App Service (like elastic beanstalk)
+## Azure SQL (AWS RDS)
+* fully scalable relational databse in the cloud
+* Azure SQL Database serverless (aws Aurora Serverless): just a serverless database
+* High availability, Azure zone redundant configuration (aws Multi-Zone Deployment)
+* Secondary DB, Azure active geo-replication = AWS Read Replicas
+
+## Azure App Service (elastic beanstalk)
 
 ## CosmosDB (aws dynamodb)
 
-## Azure AD (aws IAM)
+## Azure AD - Active Directory (aws IAM)
 
 ## Azure Frontdoor (aws cloudfront)
 
 ## Azure Monitor (aws cloudwatch)
 
+
+<img width="1272" alt="Screenshot 2024-04-10 at 12 25 44 PM" src="https://github.com/mfkimbell/cloud-notes/assets/107063397/31f97365-4f9f-444a-b9ff-4d62d24696ef">
+
 ## Azure Event Grid (aws eventbridge)
 
 ## Azure Event Hub (aws kinesis)
 
+## Azure Service Bus (aws Event Bridge service bus or SQS+SNS)
+
+
 ## Azure Notification Hub (aws SNS)
+
+## Azure Storage Queue (aws SQS)
+
+
+
+
 
