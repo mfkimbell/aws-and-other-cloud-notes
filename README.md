@@ -202,9 +202,26 @@ SSE-KMS (can edit keys through KMS, not automatic through amazon, but also not c
 
 # Azure
 
-## Azure Function 
+## Azure Function (like aws lambda)
 * like lamda functions
 * serverless
 * compute on demand
 * scalable
 * support for multiple languages
+
+## Azure App Service (like elastic beanstalk)
+
+## CosmosDB (aws dynamodb)
+
+## Azure AD (aws IAM)
+
+## Azure Frontdoor (aws cloudfront)
+
+## Azure Monitor (aws cloudwatch)
+
+## Azure Event Grid (aws eventbridge)
+
+## Azure Event Hub (aws kinesis)
+
+## Azure Notification Hub (aws SNS)
+
