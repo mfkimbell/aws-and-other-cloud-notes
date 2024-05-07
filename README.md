@@ -27,9 +27,29 @@ IaaS: AWS
 * managed container service solution that's easy to use, scalable, secure, and reliable.
 * kinda like kubernetes?
 
+## WAF (web application firewall)
+* 3 uses, api gateway, cloudfront, and a loadbalancer
+* AWS WAF operates at the application layer, making decisions based on content of the HTTP/HTTPS requests, while security groups (virtual firewalls) operate at the network and transport layers, making decisions based on IP protocol data.
+* AWS WAF provides protection against web exploits (SSL injection, XXS cross-site-scripting) and can be configured to understand the application-specific patterns and attacks, whereas security groups provide basic access control and are not aware of the application-specific details
+* AWS WAF offers granular control over the HTTP and HTTPS traffic, allowing for complex rule sets based on the content of the traffic, while security groups offer broad control over general network access based on IPs and ports.
+<img width="1169" alt="Screenshot 2024-05-06 at 2 53 56 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/eecd2bc7-b11a-496c-94c2-ef5021ba79fd">
+
+## Cloudwatch
+
+## Xray
+
 ## SAM (Serverless Application Model)
 * The AWS Serverless Application Model (SAM) CLI is an open-source CLI tool that helps you develop serverless applications containing Lambda functions, Step Functions, API Gateway, EventBridge, SQS, SNS and more.
 * AWS SAM templates provide a short-hand syntax, optimized for defining ```Infrastructure as Code (IaC)``` for serverless applications.
+
+## API Gateway
+* Used for HTTP, REST (CRUD), and Websocket connections (real time)
+* HTTP and REST are for request and response model interactions
+* REST is more advanced than HTTP, it can do things like integrate with authorizers for amazon cognito, work with web application firewalls, API keys with usage plans
+* Websockets are more "bi-directional" so transactions or real-time chat
+* BE CAREFUL, it has a 30 second integration (with other services) timeout (hard limit).
+* 10MB payload size (hard limit)
+ <img width="1227" alt="Screenshot 2024-05-06 at 3 15 36 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/6d7b6900-142b-4065-b7d6-9a8ff8869572">
 
 ## Lambda
 
