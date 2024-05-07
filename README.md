@@ -1,3 +1,9 @@
+# AWS Lambda .NET video
+* remember with AWS lambda on .NET, you have to install a couple modules
+https://www.youtube.com/watch?v=PTnWbKWm3uo&ab_channel=RahulNath
+<img width="681" alt="Screenshot 2024-05-07 at 9 37 15 AM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/9742d54a-f9ae-40ab-8865-91120ed10114">
+
+
 # cloud-notes
 
 <img width="693" alt="Screenshot 2024-04-03 at 7 17 08 PM" src="https://github.com/mfkimbell/cloud-notes/assets/107063397/4853e809-e16a-4025-a47e-5b7fa8b4dfcc">
