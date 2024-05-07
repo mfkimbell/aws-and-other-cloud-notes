@@ -1,5 +1,6 @@
 # AWS Lambda .NET video
 * remember with AWS lambda on .NET, you have to install a couple modules
+* there is a module that enables the publish (i'm pretty sure that's what we did) but the guy in the video does it programatically
 https://www.youtube.com/watch?v=PTnWbKWm3uo&ab_channel=RahulNath
 <img width="681" alt="Screenshot 2024-05-07 at 9 37 15 AM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/9742d54a-f9ae-40ab-8865-91120ed10114">
 
