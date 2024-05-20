@@ -1,3 +1,17 @@
+# Services I have worked with
+* RDS
+* Dynamo DB
+* Amplify
+* Fargate
+* EC2
+* EKS
+* ECS (which project?)
+* ECR (serverless django?)
+* IAM
+* 
+
+
+
 # AWS Lambda .NET video
 * remember with AWS lambda on .NET, you have to install a couple modules
 * there is a module that enables the publish (i'm pretty sure that's what we did) but the guy in the video does it programatically
@@ -78,6 +92,31 @@ ssh user-fqdn@LinuxBastion-fqdn -L 2222:52.90.8.209:22
 <img width="1169" alt="Screenshot 2024-05-06 at 2 53 56 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/eecd2bc7-b11a-496c-94c2-ef5021ba79fd">
 
 ## Cloudwatch
+
+AWS CloudWatch is a monitoring and observability service that provides data and actionable insights for AWS, hybrid, and on-premises applications and infrastructure resources. Here's an overview of how it works:
+
+Key Components and Features
+Metrics Collection
+
+Default Metrics: CloudWatch automatically collects metrics from AWS services like EC2, RDS, S3, Lambda, and more.
+Custom Metrics: Users can publish their own metrics using the AWS SDK, CloudWatch API, or the CloudWatch Agent.
+Logs Monitoring
+
+CloudWatch Logs: Collects and stores logs from AWS resources, applications, and services. You can use the CloudWatch Logs Agent to send log data from your instances.
+Log Insights: Allows you to interactively search and analyze log data.
+Alarms
+
+Threshold-based Alarms: Set thresholds on metrics to trigger actions, such as sending notifications via SNS or triggering Auto Scaling actions.
+Composite Alarms: Combine multiple alarms into a single alarm to reduce alarm noise and complexity.
+Dashboards
+
+Visualization: Create custom dashboards to visualize metrics and logs. Dashboards can include graphs, text, and other widgets to display real-time data.
+Events
+
+CloudWatch Events: Respond to changes in your AWS resources. For example, you can automatically trigger Lambda functions, send notifications, or take corrective actions based on events.
+Anomaly Detection
+
+Anomaly Detection: Uses machine learning to continuously analyze metrics and create models that predict normal behavior. Alerts are generated when anomalies are detected.
 
 ## Xray
 
