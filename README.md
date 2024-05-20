@@ -1,17 +1,25 @@
 # Services I have worked with
 * RDS (used postgres to manage user login information for serverless django webapp)
 * Dynamo DB (aws amplify project storing of user comments)
-* Amplify
+* Amplify (created a basic group file uploading dashboard through it, it handled the backend appsync/graphql to dyanmodb for comments and then regular s3 uploading and deleting)
 * Fargate (serverless django, uses ECS to manage containers in a serverless fashion)
 * EC2 (running various instances, mainly ubuntu, but also NGINX)
 * S3 (storing of images in file sharing service) (storing of images in Amplify file sharing dashbaord)
+* Route53 (i've registered multiple domains, through GoDaddy, as well as through AWS for my test API and django application)
 * EKS (running kubernetes in both pipeline projects)
 * KubeCTL (command line for eks for testing)
 * ECS (used in django serverless webapp to deploy container in fargate task)
 * ECR (serverless django pushing from local terminal manually)
-* IAM (various roles made for permission purposes)
-* Not used SAM, but I've used Terraform, which is pretty similar. Azure's equivalent would be ARM.
-
+* IAM (various roles made for permission purposes) (ex: i created a group called "developer" for my django applicaiton so they could access EC2 and ECS)
+* SAM I haven't used, but I've used Terraform, which is pretty similar. Azure's equivalent would be ARM.
+* API gateway (I've played around with api gateway, i've created basic routes that lead to test lambda functions, I'm eventually going to make it so those lambda functions manipulate a database)
+* Lambda (i've written lambda functions that access S3 and send links to people for file sharing)
+* Cognito (I wrapped my Amplify project in a cognito login authenticator)
+* VPC (I've messed with VPCs and routing tables during my terraform aws project)
+* Amplify (for my amplify project)
+* SNS and SES (both i used for messaging, but i get the impression SES is more for mass spam, they can both accomplish a lot of the same though)
+* S3 Bucket policies (for allowing public access to public images and websites)
+* IAM policies (for managing user groups)
   
 <img width="646" alt="Screenshot 2024-05-20 at 1 08 02 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/dbe26161-4597-4b36-9ec3-c9196134a104">
 
