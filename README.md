@@ -21,19 +21,10 @@
 * Network Load Balancer (Best suited for TCP, UDP, and TLS traffic. NLBs distribute traffic based on network conditions. For example, if you have multiple database servers with duplicate data, the NLB routes traffic based on predetermined server IP addresses or server availability.)
 * Gateway Load Balancer (
 
-# Spaceify
-* EC2 instances all with docker installed all running different containers
-* All instances were Ubuntu distributions
-* NGINX acting as a reverse proxy to send to our backend endpoints as well as redirecting to our frontend. 
-* container for NGINX, React, and FastAPI, we pulled the containers from dockerhub. We ran them on separate EC2s for performance sake since we were using the free tier.
-
-# terraform-aws-DevOps
-* AWS accessed via terraform (and some manually)
-* Used Terraform to establish a VPC, subnets, and security groups, and to build the base EC2 servers for Jenkins-Master, Jenkins-BuildSlave, and Ansible
 
 
 
-# AWS Lambda .NET video
+# AWS Lambda .NET video for later use
 * remember with AWS lambda on .NET, you have to install a couple modules
 * there is a module that enables the publish (i'm pretty sure that's what we did) but the guy in the video does it programatically
 https://www.youtube.com/watch?v=PTnWbKWm3uo&ab_channel=RahulNath
