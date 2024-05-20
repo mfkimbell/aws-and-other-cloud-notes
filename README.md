@@ -1,14 +1,35 @@
 # Services I have worked with
-* RDS
-* Dynamo DB
+* RDS (used postgres to manage user login information for serverless django webapp)
+* Dynamo DB (aws amplify project storing of user comments)
 * Amplify
-* Fargate
-* EC2
-* EKS
-* ECS (which project?)
-* ECR (serverless django?)
-* IAM
+* Fargate (serverless django, uses ECS to manage containers in a serverless fashion)
+* EC2 (running various instances, mainly ubuntu, but also NGINX)
+* S3 (storing of images in file sharing service) (storing of images in Amplify file sharing dashbaord)
+* EKS (running kubernetes in both pipeline projects)
+* KubeCTL (command line for eks for testing)
+* ECS (used in django serverless webapp to deploy container in fargate task)
+* ECR (serverless django pushing from local terminal manually)
+* IAM (various roles made for permission purposes)
 * 
+* Not used SAM, but I've used Terraform, which is pretty similar. Azure's equivalent would be ARM.
+
+  
+<img width="646" alt="Screenshot 2024-05-20 at 1 08 02 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/dbe26161-4597-4b36-9ec3-c9196134a104">
+
+* Application Load Balancer: (serverless django app uses a load balancer -> Listener -> target group -> directs to port 8000 so it can communicate with docker containers deployed through ECS and fargate by extension). 
+* Elastic Load Balancer (older/somewhat outdated)
+* Network Load Balancer (Best suited for TCP, UDP, and TLS traffic. NLBs distribute traffic based on network conditions. For example, if you have multiple database servers with duplicate data, the NLB routes traffic based on predetermined server IP addresses or server availability.)
+* Gateway Load Balancer (
+
+# Spaceify
+* EC2 instances all with docker installed all running different containers
+* All instances were Ubuntu distributions
+* NGINX acting as a reverse proxy to send to our backend endpoints as well as redirecting to our frontend. 
+* container for NGINX, React, and FastAPI, we pulled the containers from dockerhub. We ran them on separate EC2s for performance sake since we were using the free tier.
+
+# terraform-aws-DevOps
+* AWS accessed via terraform (and some manually)
+* Used Terraform to establish a VPC, subnets, and security groups, and to build the base EC2 servers for Jenkins-Master, Jenkins-BuildSlave, and Ansible
 
 
 
@@ -29,8 +50,7 @@ IaaS: AWS
 
 # Ansible
 * ssh on steroids
-
-# AWS
+* No requirement for ansible agent on recieving VM
 
 
 # aws-notes
@@ -119,8 +139,20 @@ Anomaly Detection
 Anomaly Detection: Uses machine learning to continuously analyze metrics and create models that predict normal behavior. Alerts are generated when anomalies are detected.
 
 ## Xray
+* Helps developers analyze and debug distributed applications, such as those built using a microservices architecture. It provides end-to-end tracing of requests as they move through your application, enabling you to identify performance bottlenecks, errors, and other issues.
+* End-to-End Tracing
+Trace Requests: Tracks requests from the point they enter your application to when they exit, capturing data at each step along the way.
+* Service Map: Visualizes the relationships between services in your application, showing how requests flow and where bottlenecks occur.
+* Focuses on tracing and analyzing the flow of requests across a distributed system. It provides a high-level overview of application performance, service dependencies, and end-to-end request paths. X-Ray is designed to help identify bottlenecks, performance issues, and errors in complex, microservices-based applications.
+* **CloudWatch Logs:** DIFFERENT, Primarily used for collecting and storing log data from AWS resources, applications, and services. It provides detailed, granular log information that can be used for troubleshooting, auditing, and log analysis. CloudWatch Logs helps with tracking events and debugging at the level of individual log entries.
+* **AWS X-Ray:** Captures data at the level of individual requests and their interactions with various services and components. It provides insights into the structure and performance of distributed systems.
+* **CloudWatch Logs:** Collects log entries that detail specific events, errors, and operational data. It provides a log-level view of what is happening within your applications and infrastructure.
+
 
 ## SAM (Serverless Application Model)
+* Similar to Terraform, builds up Cloudformation YAML
+* NOT SAML (Security Assertion Markup Language)
+Security Assertion Markup Language (SAML) is an open standard for exchanging authentication and authorization data between parties, particularly between an identity provider and a service provider. Think Single Sign On (SSO). 
 * The AWS Serverless Application Model (SAM) CLI is an open-source CLI tool that helps you develop serverless applications containing Lambda functions, Step Functions, API Gateway, EventBridge, SQS, SNS and more.
 * AWS SAM templates provide a short-hand syntax, optimized for defining ```Infrastructure as Code (IaC)``` for serverless applications.
 
@@ -180,6 +212,10 @@ What are some useful examples?
 * consists of public and private subnets
 * ```Routing table``` for each subnet to map IP endpoints
 * Private subnets can use a ```NAT Gateway``` to connect to the internet
+* **Subnet:**
+* A subnet is a range of IP addresses in your VPC.
+* You can create multiple subnets within a VPC, each associated with a specific Availability Zone.
+* Subnets can be classified as either public or private based on their connectivity to the internet.
 
 ## Cloudfront
 * Amazon CloudFront, AWS's content delivery network (CDN) service, uses a network of distributed ```edge locations to cache and deliver content closer to end-users```. These edge locations are strategically positioned around the world to reduce latency and improve the performance of content delivery.
