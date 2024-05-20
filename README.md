@@ -10,7 +10,6 @@
 * ECS (used in django serverless webapp to deploy container in fargate task)
 * ECR (serverless django pushing from local terminal manually)
 * IAM (various roles made for permission purposes)
-* 
 * Not used SAM, but I've used Terraform, which is pretty similar. Azure's equivalent would be ARM.
 
   
