@@ -63,10 +63,10 @@ ssh user-fqdn@LinuxBastion-fqdn -L 2222:52.90.8.209:22
 * SSH into Ubuntu containers ```ssh -i dpp.pem ubuntu@52.202.26.181```
 * Becoming root Ubuntu  ```sudo su -```
 
-## ECR
+## ECR (elastic container registry)
 * fully managed Docker container registry that makes it easy to store, share, and deploy container images.
 
-## ECS 
+## ECS (elastic container service)
 * managed container service solution that's easy to use, scalable, secure, and reliable.
 * kinda like kubernetes?
 
