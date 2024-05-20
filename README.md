@@ -35,9 +35,9 @@ https://www.youtube.com/watch?v=PTnWbKWm3uo&ab_channel=RahulNath
 
 <img width="693" alt="Screenshot 2024-04-03 at 7 17 08 PM" src="https://github.com/mfkimbell/cloud-notes/assets/107063397/4853e809-e16a-4025-a47e-5b7fa8b4dfcc">
 
-SaaS: Slack
-PaaS: Elastic beanstalk, Google App Engine, OpenShift
-IaaS: AWS
+* SaaS: Slack
+* PaaS: Elastic beanstalk, Google App Engine, OpenShift
+* IaaS: AWS
 
 # Ansible
 * ssh on steroids
