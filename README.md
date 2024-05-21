@@ -103,7 +103,7 @@ ssh user-fqdn@LinuxBastion-fqdn -L 2222:52.90.8.209:22
 ## WAF (web application firewall)
 * 3 uses, api gateway, cloudfront, and a loadbalancer
 * AWS WAF operates at the application layer, making decisions based on content of the HTTP/HTTPS requests, while security groups (virtual firewalls) operate at the network and transport layers, making decisions based on IP protocol data.
-* AWS WAF provides protection against web exploits (SSL injection, XXS cross-site-scripting) and can be configured to understand the application-specific patterns and attacks, whereas security groups provide basic access control and are not aware of the application-specific details
+* AWS WAF provides protection against web exploits (SQL injection, XXS cross-site-scripting) and can be configured to understand the application-specific patterns and attacks, whereas security groups provide basic access control and are not aware of the application-specific details
 * AWS WAF offers granular control over the HTTP and HTTPS traffic, allowing for complex rule sets based on the content of the traffic, while security groups offer broad control over general network access based on IPs and ports.
 <img width="1169" alt="Screenshot 2024-05-06 at 2 53 56 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/eecd2bc7-b11a-496c-94c2-ef5021ba79fd">
 
