@@ -160,6 +160,14 @@ execution plan. This does not change the deployment (read-only).
 * 3. Terraform apply executes the plan. This potentially changes the deployment.
 * 4. Terraform destroy deletes all resources that are governed by this specific terraform environment.
 
+After applying, you get a `terraform.tfstate` that keeps track of the currently created resources, this is what's referenced when destroying. It's not encouraged, but you can make manual changes and then manually update the tfstate. 
+
+`.tfvars` keeps track of variables you want. 
+
+You can start to do more dynamic things like create a list and generate a resource for each item in that list and name it based on the list entry. You can loop and create a resource a certain number of times, etc...
+
+`terraform state list` lists all the resources you currently have deployed, and you can filter by resource. 
+
 Connect to remote backend
 
 ## Basic AWS Setup
