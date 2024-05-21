@@ -337,6 +337,11 @@ User Management – allows management of user lifecycles, such as importing user
 * Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring based on the code you upload to it, where as CloudFormation is an automated provisioning engine designed to deploy entire cloud environments via a JSON script.
 * Elastic beanstalk holds your hands a lot more
 
+## Elastic Beanstalk vs Amplify
+* Amplify is serverless
+* Elastic Beanstalk is more mature (older)
+* Simpler applications are a better fit for Amplify
+
 ## AWS Cloud9	
 * Write, run, and debug code on a cloud IDE
 * Cloud based IDE like VSCode
