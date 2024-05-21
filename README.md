@@ -162,6 +162,8 @@ Trace Requests: Tracks requests from the point they enter your application to wh
 Security Assertion Markup Language (SAML) is an open standard for exchanging authentication and authorization data between parties, particularly between an identity provider and a service provider. Think Single Sign On (SSO). 
 * The AWS Serverless Application Model (SAM) CLI is an open-source CLI tool that helps you develop serverless applications containing Lambda functions, Step Functions, API Gateway, EventBridge, SQS, SNS and more.
 * AWS SAM templates provide a short-hand syntax, optimized for defining ```Infrastructure as Code (IaC)``` for serverless applications.
+* Remember, this gets converted to Cloudformation YAML, but it has more brevity
+* Another difference to cloudformation is that it can be tested locally. 
 
 ## Terraform
 <img width="790" alt="Screenshot 2024-05-21 at 1 40 00 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/8dca071c-9b65-4ac4-af82-020cfece6848">
