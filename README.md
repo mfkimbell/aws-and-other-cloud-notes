@@ -152,6 +152,45 @@ Security Assertion Markup Language (SAML) is an open standard for exchanging aut
 * The AWS Serverless Application Model (SAM) CLI is an open-source CLI tool that helps you develop serverless applications containing Lambda functions, Step Functions, API Gateway, EventBridge, SQS, SNS and more.
 * AWS SAM templates provide a short-hand syntax, optimized for defining ```Infrastructure as Code (IaC)``` for serverless applications.
 
+## Terraform
+<img width="790" alt="Screenshot 2024-05-21 at 1 40 00 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/8dca071c-9b65-4ac4-af82-020cfece6848">
+* 1. Terraform init initializes the (local) Terraform environment. Usually executed only once per session.
+* 2. Terraform plan compares the Terraform state with the as-is state in the cloud, build and display an
+execution plan. This does not change the deployment (read-only).
+* 3. Terraform apply executes the plan. This potentially changes the deployment.
+* 4. Terraform destroy deletes all resources that are governed by this specific terraform environment.
+
+Connect to remote backend
+
+## Basic AWS Setup
+``` Python
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws" # Specifies the official Terraform registry as the source for the AWS provider
+      version = "~> 5.0"        # Use version 3.x.x of the AWS provider; adjust as needed based on compatibility and features
+    }
+  }
+
+  backend "remote" {
+    organization = "mfkimbell"
+
+    workspaces {
+      name = "dev-react"
+    }
+  }
+}
+
+# Configure the AWS provider
+provider "aws" {
+
+  region = "us-east-1" # Specifies the AWS region for your resources; change this as per your requirements
+  # Optionally, you can specify credentials here, but it's often better to use
+  # environment variables or other methods for managing AWS credentials securely.
+}
+```
+
+
 ## API Gateway
 * Used for HTTP, REST (CRUD), and Websocket connections (real time)
 * HTTP and REST are for request and response model interactions
