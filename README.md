@@ -87,7 +87,18 @@ scp -i /Users/mitchellkimbell/desktop/devops-files dpp.pem ubuntu@52.90.8.209:/o
 ssh user-fqdn@LinuxBastion-fqdn -L 2222:52.90.8.209:22
 
 ## Serverless
-* SAM, DynamoDB, Fargate, Lambda, 
+* SAM, DynamoDB, Fargate, Lambda,
+
+## Fargate 
+* Clusters: In AWS Fargate, a cluster is a logical grouping of tasks or services. Think of it as an environment where your containers run. While you don’t manage the physical servers in a Fargate cluster, the concept of a cluster helps organize and consolidate your containerized applications.
+* Tasks: A task is the basic unit of deployment in Fargate. It represents a running container or a group of containers. When you launch an application in Fargate, you’re essentially running a task. Each task has its own configuration, such as the container image to use, CPU and memory requirements, and network settings. If you run Kubernetes clusters on Fargate, instead of tasks, Fargate runs Kubernetes pods.
+* Task definitions: This is a blueprint for your task. A task definition specifies everything your application needs to run, like the container image, CPU and memory allocation, environment variables, and other settings. You can think of it as a recipe that tells Fargate how to run your containerized application.
+* Services: Services in Fargate are used to run and maintain a specified number of instances of a task definition simultaneously. If a task in a service stops or fails, the service scheduler launches a new instance of the task to replace it, helping to ensure your application remains available.
+
+## Cloudfront
+* Origin access control on an S3 bucket can restrict it to one source, like cloudfront4
+* Improve security with traffic encryption and access controls, and use AWS Shield Standard to defend against distributed denial-of-service (DDoS) attacks at no additional charge.
+* Decrease latency for static content
 
 ## EC2
 * SSH into Amazon Linux containers  ```ssh -i dpp.pem ec2-user@34.201.245.118```
