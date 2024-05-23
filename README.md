@@ -111,6 +111,9 @@ ssh user-fqdn@LinuxBastion-fqdn -L 2222:52.90.8.209:22
 * managed container service solution that's easy to use, scalable, secure, and reliable.
 * kinda like kubernetes?
 
+## EKS (Elastic Kubernetes Service)
+![Kubernetes-architecture-diagram-1-1-1024x698](https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/6ab0ea6c-24ce-4181-8b7c-e6485c1f1a4a)
+
 ## WAF (web application firewall)
 * 3 uses, api gateway, cloudfront, and a loadbalancer
 * AWS WAF operates at the application layer, making decisions based on content of the HTTP/HTTPS requests, while security groups (virtual firewalls) operate at the network and transport layers, making decisions based on IP protocol data.
