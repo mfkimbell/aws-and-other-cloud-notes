@@ -21,6 +21,21 @@
   
 <img width="646" alt="Screenshot 2024-05-20 at 1 08 02 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/dbe26161-4597-4b36-9ec3-c9196134a104">
 
+
+Containers vs VMs:
+In a container, only the necessary components to run the application are included. These components typically consist of the application code, its dependencies, and the runtime environment, such as libraries and binaries. Here's a breakdown of what's typically included:
+
+Application Code: The code of the application itself is included in the container. This could be your own code or a third-party application you want to run.
+
+Dependencies: Any libraries or dependencies required by the application are included in the container. This ensures that the application has everything it needs to run, without relying on the host system's libraries.
+
+Runtime Environment: The container includes a minimal runtime environment needed to execute the application. This could be a specific version of a programming language (like Python, Node.js, or Java), along with any necessary tools or utilities.
+
+Containers do not include a full operating system. Instead, they rely on the host system's kernel for operating system functions. This is why containers are often much smaller and more lightweight than virtual machines, which require a full operating system to be included in each instance.
+
+<img width="625" alt="Screenshot 2024-05-28 at 3 27 42 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/cc2bb26c-5429-4937-a4af-de84eebc6837">
+
+
 * Application Load Balancer: (serverless django app uses a load balancer -> Listener -> target group -> directs to port 8000 so it can communicate with docker containers deployed through ECS and fargate by extension). 
 * Elastic Load Balancer (older/somewhat outdated)
 * Network Load Balancer (Best suited for TCP, UDP, and TLS traffic. NLBs distribute traffic based on network conditions. For example, if you have multiple database servers with duplicate data, the NLB routes traffic based on predetermined server IP addresses or server availability.)
