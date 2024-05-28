@@ -21,6 +21,18 @@
   
 <img width="646" alt="Screenshot 2024-05-20 at 1 08 02 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/dbe26161-4597-4b36-9ec3-c9196134a104">
 
+# CI
+CI is all about integrating codebase into a shared repository, and then executing various tests when changes occur or during other "build triggers". 
+
+Different kinds of testing:
+* Integration testing: ensuring all the parts work together as expected
+* Unit testing: ensure that specific components are working as expected
+* Regression testing: ensuring that new changes don't break existing functionality
+
+# CD
+CD is all about deployment. This is regularly do different stages. These stages usually consist of a DEV, TEST, and PROD. 
+Deployments are usually built to be fault resistant, using loadbalancers and scalability through containers or kubernetes pods. 
+Deplouments must also be secure, so endpoints must be tested. 
 
 Containers vs VMs:
 In a container, only the necessary components to run the application are included. These components typically consist of the application code, its dependencies, and the runtime environment, such as libraries and binaries. Here's a breakdown of what's typically included:
@@ -58,8 +70,15 @@ https://www.youtube.com/watch?v=PTnWbKWm3uo&ab_channel=RahulNath
 * SaaS: Slack
 * PaaS: Elastic beanstalk, Azure App Service,  Google App Engine, OpenShift
 * IaaS: AWS (Cloudformation/SAM), Azure (ARM)
-
+  
+<img width="1413" alt="Screenshot 2024-05-28 at 3 47 17 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/01702314-8e57-46f4-92de-0aa6e9e26cbe">
 # Ansible
+Ansible also uses a `Declarative Language`.
+
+
+* **Configuration Management:** Ansible is primarily a configuration management tool. It is designed to automate the provisioning and configuration of servers and software.
+* **Agentless:** Ansible is agentless, meaning it doesn't require any software to be installed on the target machines. It communicates with them using SSH.'
+* **SSH ON STEROIDS**
 * ssh on steroids
 * No requirement for ansible agent on recieving VM
 
@@ -125,6 +144,11 @@ ssh user-fqdn@LinuxBastion-fqdn -L 2222:52.90.8.209:22
 ## ECS (elastic container service)
 * managed container service solution that's easy to use, scalable, secure, and reliable.
 * kinda like kubernetes?
+
+## Docker
+<img width="1387" alt="Screenshot 2024-05-28 at 3 49 00 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/20cdb1f4-0e5c-4a90-bc90-983fd8abf301">
+##Kubernetes
+<img width="1407" alt="Screenshot 2024-05-28 at 3 49 17 PM" src="https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/9247ef6d-4a38-4a88-a0ad-7edfda1c4eaf">
 
 ## EKS (Elastic Kubernetes Service)
 ![Kubernetes-architecture-diagram-1-1-1024x698](https://github.com/mfkimbell/aws-and-other-cloud-notes/assets/107063397/6ab0ea6c-24ce-4181-8b7c-e6485c1f1a4a)
