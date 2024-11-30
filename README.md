@@ -15,7 +15,7 @@
 * RDS (used postgres to manage user login information for serverless django webapp)
 * SNS and SES (both i used for messaging, but i get the impression SES is more for mass spam, they can both accomplish a lot of the same though)
 * S3 (storing of images in file sharing service) (storing of images in Amplify file sharing dashbaord)
-* SAM I haven't used, but I've used Terraform, which is pretty similar. Azure's equivalent would be ARM.
+* SAM I've used for my unicorn rental servie. Also, I've used Terraform, which is pretty similar. Azure's equivalent would be ARM.
 * S3 Bucket policies (for allowing public access to public images and websites)
 * VPC (I've messed with VPCs and routing tables during my terraform aws project)
   
